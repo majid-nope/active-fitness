@@ -85,7 +85,7 @@ export default function Home(props) {
 export async function getServerSideProps() {
   const [productsRes, dealRes] = await Promise.all([
     fetch("https://fakestoreapi.com/products"),
-    fetch("http://localhost:3000/api/getDeal"),
+    fetch("https://active-fitness.vercel.app/api/getDeal"),
   ]);
 
   const [products, deals] = await Promise.all([
